@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url("{% static 'img/image12.gif' %}");
+			background-size: cover;
+			background-position: center;
+            background-repeat: no-repeat;
+		}
+
+		h2 {
+			color: black;
+			text-align: center;
+			margin-top: 50px;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		}
+
+		form {
+			background-color: transparent;
+			padding: 20px;
+			margin: 50px auto;
+			max-width: 400px;
+			position: relative;
+			left: -350px;
+            top: 50px;
+			border: none;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color:black;
+		}
+
+		input[type="text"], input[type="password"] {
+			display: block;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 100%;
+			font-size: 16px;
+			outline: none;
+		}
+
+		input[type="submit"] {
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #0056b3;
+		}
+	</style>
+</head>
+<body>
+
+	
+
+	<form action="/handlelogin" method="POST">
+		{% csrf_token %}
+		<h2>Login</h2>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="pass1" required>
+
+		{% comment %} <input type="submit" value="Login"> {% endcomment %}
+		<input type="submit" value="login">
+	</form>
+
+</body>
+</html>

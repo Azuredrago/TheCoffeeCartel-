@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0;
+  width: auto;
+}
+body {
+  margin: 0;
+  /* height:100vh;
+  background-image: url("{% static 'img/backimage1.jpg' %}");
+  background-size: 100% 100%; */
+  background-repeat: no-repeat;
+
+}
+
+.logo {
+  width: 50px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: #f00;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search, .shopping-cart {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.search:hover, .shopping-cart:hover {
+  cursor: pointer;
+  color: #f00;
+}
+.background-image {
+  background-image: url("{% static 'img/backimage1.jpg' %}");
+  background-size: 100% 100%;
+ 
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  margin:0;
+}
+
+.slogan-container {
+  text-align: center;
+  color: #fff;
+}
+
+.slogan-container h1 {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.slogan-container p {
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.get-now-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.get-now-btn:hover {
+  background-color: #f00;
+  color: #fff;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
+</head>
+<body>
+  <nav class="nav1">
+    <div class="logo">
+      <img height="80px" width="150px" src="{% static 'img/logo.png' %} "alt="Logo">
+    </div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Review</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li class="dropdown">
+        <a href="#">New User <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="/signup">Sign Up</a>
+          <a href="/handlelogin">Login</a>
+        </div>
+      </li>
+    </ul>
+    <div class="search">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="shopping-cart">
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+  </nav>
+  <div class="background-image">
+    <div class="slogan-container">
+      <h1>The Coffee Cartel</h1>
+      <h1>Great coffee, great day</h1>
+      <p>Discover the best coffee in town</p>
+      <a href="#" class="get-now-btn">Get Now</a>
+    </div>
+  </div>
+  
+  <!-- <div class="content">
+    <h1></h1>
+  </div> -->
+  
+</body>
+</html>
