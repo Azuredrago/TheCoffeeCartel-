@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+  
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+  
+h1 {
+    text-align: center;
+    color: #333;
+}
+  
+.feedback-form {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+  
+.form-group {
+    margin-bottom: 20px;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+  
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+}
+  
+.form-group textarea {
+    height: 150px;
+}
+  
+.form-group .stars {
+    display: flex;
+    align-items: center;
+}
+  
+.form-group .stars label {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+  
+.form-group .stars input[type="radio"] {
+    display: none;
+}
+  
+.form-group .stars label:hover,
+.form-group .stars label:hover ~ label,
+.form-group .stars input[type="radio"]:checked ~ label {
+    color: #ffd700;
+}
+  
+.feedback-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+  
+.feedback-item {
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+  
+.feedback-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+}
+  
+.feedback-item .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.feedback-item .rating label {
+    font-size: 16px;
+    color: #ccc;
+    margin-right: 10px;
+}
+  
+.feedback-item .rating .stars label {
+    font-size: 20px;
+    color: #ffd700;
+    cursor: default;
+}
+  
+.feedback-item .review {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  

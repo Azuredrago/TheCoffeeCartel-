@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-image: url("https://images.unsplash.com/photo-1607327864768-118dc0f1bf87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+	background-size: cover;
+	background-position: center;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+	background-color: #0062cc;
+}
+
+.payment-option {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.payment-option input[type="radio"] {
+	margin-right: 10px;
+}
+
+.payment-option label {
+	font-weight: bold;
+}
+
+.card-details {
+	display: none;
+}
+
+.card-details.show {
+	display: block;
+}
+
+.upi-details {
+	display: none;
+}
+
+.upi-details.show {
+	display: block;
+}
+
+.thankyou-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.thankyou-popup.show {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.thankyou-popup-inner {
+	max-width: 600px;
+	background-color: #fff;
+	padding: 50px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		padding: 30px;
+	}
+}

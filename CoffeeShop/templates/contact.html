@@ -1,0 +1,207 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% load static %}
+{% comment %} {% block title %}☕Contact☕{% endblock title %}
+{% block head %} 
+<link rel="stylesheet" href="{% static 'css/' %}">
+
+{% endblock head %}
+
+{% block body %}
+Welcome To ☕Contact Page☕
+<!-- Write your Code here -->
+
+
+{% endblock body %} {% endcomment %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    body {
+        background-color: transparent;
+        background-image: url("{% static 'img/3444096.jpg' %}"); 
+
+        color: white;
+        font-family: sans-serif;
+      }
+      
+      .container-1 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .map {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 50px;
+      }
+      
+      .map img {
+        width: 100%;
+      }
+      
+      .form {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 10px;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #7B3F00;
+      }
+      
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      label {
+        width: 100%;
+        margin-bottom: 5px;
+        color: white;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #1c1c1c;
+        color: white;
+      }
+      
+      textarea {
+        height: 100px;
+      }
+      
+      button[type="submit"] {
+        background-color: #7B3F00;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 10px;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #562107;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        .map,
+        .form {
+          width: 100%;
+        }
+      }
+      header {
+        background-color:transparent;
+        background-image: url("{% static 'img/3444096.jpg' %}"); 
+
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+      
+      .logo {
+        font-size: 30px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        margin: 0;
+      }
+      
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      nav ul li {
+        margin: 0 10px;
+      }
+      
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      
+      nav ul li a:hover {
+        color: #ff9800;
+    }
+    #message {
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      
+      #message p {
+        margin: 0;
+    }
+      
+      
+      
+  </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1 class="logo">The Coffee Cartel</h1>
+          <nav>
+            <ul>
+              <li><a href="/products">Home</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+  <div class="container-1">
+    <div class="map">
+      <!-- Insert your map code or image here -->
+      <img src="{% static 'img/map.png' %}" alt="Map of coffee shop location">
+    </div>
+    <div class="form">
+      <h1>Contact Us</h1>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit" onclick="displayMessage()">Contact Now</button>
+      </form>
+    </div>
+  </div>
+  <div id="message" style="display: none;">
+    <p>Thank you for reaching us!</p>
+  </div>
+</body>
+<script>
+    function displayMessage() {
+        document.getElementById("message").style.display = "block";
+    }
+      
+</script>
+</html>
